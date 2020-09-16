@@ -1,0 +1,144 @@
+/*
+============================================
+USER MENU
+============================================
+*/
+#userMenu {
+  margin-top: 10px;
+}
+
+#userMenu li {
+  float: left;
+}
+
+#userMenu li a {
+  margin: 11px 30px 0 0;
+  color: #fff;
+  display: inline-block;
+}
+
+#aboutWidget,
+#notificationWidget,
+#editWidget,
+#userWidget {
+  position: relative;
+}
+
+#aboutWidget:hover,
+#notificationWidget:hover,
+#editWidget:hover,
+#userWidget:hover {
+  cursor: pointer;
+}
+
+/*
+============================================
+USER MENU MODAL BODY
+============================================
+*/
+#userMenu .body {
+  position: absolute;
+  z-index: 10;
+  width: 200px;
+  background-color: #fff;
+  border: solid 1px lightgray;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0ms, opacity 150ms;
+}
+
+#userMenu .body.expanded {
+  visibility: visible;
+  opacity: 100;
+}
+
+#userMenu .body ul {
+  display: block;
+  clear: both;
+}
+
+#userMenu .body .nav-item {
+  width: 100%;
+  display: block;
+  background-color: rgba(256, 256, 256, 1);
+  transition: background-color 250ms;
+}
+
+#userMenu .body .nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#userMenu .body .nav-item .nav-link {
+  margin: 0;
+  color: #000;
+}
+
+#userMenu .body .nav-item {
+  width: 100%;
+  display: block;
+  background-color: rgba(256, 256, 256, 1);
+  transition: background-color 250ms;
+}
+
+#userMenu .body .nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#userMenu .body .nav-item .nav-link {
+  margin: 0;
+  color: #000;
+}
+
+/*
+============================================
+ABOUT WIDGET
+============================================
+*/
+#aboutWidget .body {
+  top: 50px;
+  right: -115px;
+  width: 250px;
+}
+
+/*
+============================================
+NOTIFICATIONS WIDGET
+============================================
+*/
+#notificationWidget .body {
+  top: 50px;
+  right: -71px;
+  width: 350px;
+}
+
+#notificationWidget span.badge {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+}
+
+/*
+============================================
+USER WIDGET
+============================================
+*/
+#userWidget .profile-pic {
+  margin-top: 5px;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+
+#userWidget .profile-pic img {
+  width: 100%;
+  height: 100%;
+}
+
+#userWidget .body {
+  top: 45px;
+  right: 0px;
+  z-index: 10px;
+  width: 200px;
+}
