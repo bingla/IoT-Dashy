@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PageHeader from "../../common/PageHeader";
-import EventRealtimeData from "../../common/events/eventRealtimeData";
-import EventHistoricalData from "../../common/events/eventHistoricalData";
+import EventRealtimeData from "../../common/events/EventRealtimeData";
+import EventHistoricalData from "../../common/events/EventHistoricalData";
 
 const EventsPage = () => {
   return (
