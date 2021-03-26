@@ -142,25 +142,6 @@ MAIN PAGE CONTENT
 
 /*
 ============================================
-TABLE 
-============================================
-*/
-.edit-elipsis {
-  padding-top: 1px;
-  padding-left: 10px;
-  width: 26px;
-  height: 26px;
-  background-color: transparent;
-  transition: background-color 250ms;
-}
-
-.edit-elipsis:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-}
-
-/*
-============================================
 WIDGETS 
 ============================================
 */
@@ -186,10 +167,6 @@ WIDGETS
   margin-right: 10px;
 }
 
-.widget-item .widget-head i.edit {
-  color: rgba(0, 0, 0, 0.3);
-}
-
 .widget-item .widget-head span {
   font-size: 17px;
   font-weight: 600;
@@ -202,6 +179,25 @@ WIDGETS
 .widget-item .widget-footer {
   padding: 12px 16px;
   border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+/*
+============================================
+ALL KINDS OF RANDOM THINGS
+============================================
+*/
+.edit-elipsis {
+  padding-top: 1px;
+  padding-left: 10px;
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  transition: background-color 250ms;
+}
+
+.edit-elipsis:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 /*

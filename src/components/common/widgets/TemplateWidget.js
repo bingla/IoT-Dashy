@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Modal from "../Modal";
+
 import BarChartWidget from "./barChartWidget/BarChartWidget";
 import LineChartWidget from "./lineChartWidget/LineChartWidget";
 import DoughnutChartWidget from "./doughnutChartWidget/DoughnutChartWidget";
@@ -25,24 +27,35 @@ const ContainerWidget = ({ type, icon, title, content, data }) => {
     }
   }
 
+  const handleClose = () => {};
+
   return (
-    <div className="col-md-12 col-lg-4 mb-3">
-      <div className="widget-item box-shadow">
-        <div className="widget-head">
-          <div className="row">
-            <div className="col-sm-10">
-              <i className={"icon " + icon}></i>
-              <span>{title}</span>
-            </div>
-            <div className="col-sm-2 text-right">
-              <i className="edit fas fa-ellipsis-v"></i>
+    <>
+      <div className="col-md-12 col-lg-4 mb-3">
+        <div className="widget-item box-shadow">
+          <div className="widget-head">
+            <div className="row">
+              <div className="col-sm-10">
+                <i className={"icon " + icon}></i>
+                <span>{title}</span>
+              </div>
+              <div className="col-sm-2">
+                <div className="edit-elipsis rounded-circle">
+                  <i className="fas fa-ellipsis-v"></i>
+                </div>
+              </div>
             </div>
           </div>
+          <div className="widget-body">{selectWidget(type)}</div>
+          <div className="widget-footer">{content}</div>
         </div>
-        <div className="widget-body">{selectWidget(type)}</div>
-        <div className="widget-footer">{content}</div>
       </div>
-    </div>
+
+      <Modal title="Edit" handleClose={handleClose}>
+        <h5>Some text</h5>
+        <p>Some more text</p>
+      </Modal>
+    </>
   );
 };
 

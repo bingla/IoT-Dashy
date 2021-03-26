@@ -6,20 +6,22 @@ import TemplateWidget from "../../common/widgets/TemplateWidget";
 
 const DashboardPage = ({ expanded, onExpand, widgets }) => {
   const match = useRouteMatch();
-  const sideMenu = {
-    header: { title: "Dashboards", icon: "fas fa-columns", expanded: true },
-    links: [
-      { id: 1, title: "Sensors", icon: "fas fa-wifi", link: "/sensors" },
-      { id: 2, title: "Support", icon: "fas fa-user-md", link: "/support" },
-    ],
+  const header = {
+    title: "Dashboards",
+    icon: "fas fa-columns",
+    expanded: true,
   };
+  const links = [
+    { id: 1, title: "Sensors", icon: "fas fa-wifi", link: "/sensors" },
+    { id: 2, title: "Support", icon: "fas fa-user-md", link: "/support" },
+  ];
 
   return (
     <PageContainer
       expanded={expanded}
       onExpand={onExpand}
-      header={sideMenu.header}
-      links={sideMenu.links}
+      header={header}
+      links={links}
     >
       <Switch>
         <Route path={match.path}>

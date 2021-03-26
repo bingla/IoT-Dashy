@@ -8,7 +8,7 @@ const AboutWidget = ({ handleClick, expanded }) => {
   };
   return (
     <div id="aboutWidget">
-      <a href="#1" onClick={handleExpansion}>
+      <a href="#1" onClick={handleExpansion} aria-label="About Dashy">
         <i className="fas fa-question-circle"></i>
       </a>
       <div className={`body box-shadow rounded ${expanded ? "expanded" : ""}`}>

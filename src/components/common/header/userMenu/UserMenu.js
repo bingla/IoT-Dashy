@@ -13,12 +13,18 @@ const UserMenu = () => {
 
   const handleAboutExpanded = () => {
     setAboutExpanded(!aboutExpanded);
+    setNotificationsExpanded(false);
+    setUserExpanded(false);
   };
   const handleNotificationsExpanded = () => {
     setNotificationsExpanded(!notificationsExpanded);
+    setAboutExpanded(false);
+    setUserExpanded(false);
   };
   const handleUserExpanded = () => {
     setUserExpanded(!userExpanded);
+    setAboutExpanded(false);
+    setNotificationsExpanded(false);
   };
   return (
     <div id="userMenu">

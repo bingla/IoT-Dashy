@@ -5,23 +5,36 @@ import PageContainer from "../PageContainer";
 
 const HomePage = ({ expanded, onExpand }) => {
   const match = useRouteMatch();
-  const sideMenu = {
-    header: { title: "Home", icon: "fas fa-laptop-house", expanded: true },
-    links: [
-      { id: 1, title: "Dashboards", icon: "fas fa-columns", link: "/" },
-      { id: 2, title: "Statistics", icon: "fas fa-chart-pie", link: "/" },
-      { id: 3, title: "Billing", icon: "fas fa-credit-card", link: "/" },
-      { id: 4, title: "IAM & Admin", icon: "fas fa-shield-alt", link: "/" },
-      { id: 5, title: "Support", icon: "fas fa-user-md", link: "/" },
-    ],
-  };
+  const header = { title: "Home", icon: "fas fa-laptop-house", expanded: true };
+  const links = [
+    {
+      id: 1,
+      title: "Dashboards",
+      icon: "fas fa-columns",
+      link: "dashboards",
+    },
+    { id: 2, title: "Logs", icon: "fas fa-tasks", link: "admin/logs" },
+    {
+      id: 4,
+      title: "Billing",
+      icon: "fas fa-credit-card",
+      link: "admin/billing",
+    },
+    {
+      id: 5,
+      title: "IAM",
+      icon: "fas fa-shield-alt",
+      link: "admin/iam",
+    },
+    { id: 6, title: "Support", icon: "fas fa-user-md", link: "admin" },
+  ];
 
   return (
     <PageContainer
       expanded={expanded}
       onExpand={onExpand}
-      header={sideMenu.header}
-      links={sideMenu.links}
+      header={header}
+      links={links}
     >
       <Switch>
         <Route path={match.path}>
