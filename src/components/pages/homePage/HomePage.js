@@ -13,7 +13,7 @@ const HomePage = ({ expanded, onExpand }) => {
       icon: "fas fa-columns",
       link: "dashboards",
     },
-    { id: 2, title: "Logs", icon: "fas fa-tasks", link: "admin/logs" },
+    { id: 2, title: "Logs", icon: "fas fa-tasks", link: "admin/events" },
     {
       id: 4,
       title: "Billing",

@@ -21,7 +21,7 @@ const EventRealtimeData = () => {
       }
 
       labels.push(
-        format(new Date().setDate(startDate.getDate() + i), "MM/dd-yy")
+        format(new Date().setDate(startDate.getDate() + i), "dd/MM-yy")
       );
     }
 
